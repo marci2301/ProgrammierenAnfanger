@@ -54,10 +54,10 @@ public class Warenkorb {
 	public void removeBestellung(int pos) {
 		
 		if(liste[pos-1] == null) {
-			StdOut.println("Sehr geehrte(r) " + kunde.getAnrede() + " " + kunde.getNachname() + " Die Bestellung mit der Positionsnummer " + pos + " konnte nicht geloscht werden!");
+			StdOut.println("Sehr geehrte(r) " + kunde.getAnrede() + " " + kunde.getName() + " Die Bestellung mit der Positionsnummer " + pos + " konnte nicht geloscht werden!");
 		}
 		else {
-			liste[pos-1] == null;
+			liste[pos-1] = null;
 		}
 	}
 }
