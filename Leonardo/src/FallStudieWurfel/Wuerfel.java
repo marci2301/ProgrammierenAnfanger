@@ -2,7 +2,7 @@ package FallStudieWurfel;
 
 public class Wuerfel {
 	
-	private static int augen;
+	private int augen;
 	
 	public Wuerfel(){
 		augen = 0;

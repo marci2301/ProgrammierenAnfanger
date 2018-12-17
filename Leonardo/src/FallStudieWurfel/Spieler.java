@@ -5,7 +5,7 @@ import edu.princeton.cs.introcs.StdOut;
 
 public class Spieler {
 	
-	private static String name;
+	private String name;
 	private Wuerfel[] w;
 	private boolean weiter = true;
 	
@@ -51,13 +51,14 @@ public class Spieler {
 				StdOut.println("Moechten Sie den Wuerfel " + (wurf+1) + " nochmals werfen? (j/n):");
 				a = StdIn.readString();
 				
-				if(a.contentEquals("j")){
+				if(a.startsWith("j")){
 					w[wurf].wurf();
 					weiter = true;
 					counter++;
 				}
 			}
-		}	
+		}
+		this.zeigeErgebnis();
 	}
 	
 	public int getPunktzahl(){

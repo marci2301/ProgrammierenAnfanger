@@ -4,6 +4,9 @@ import edu.princeton.cs.introcs.StdIn;
 import edu.princeton.cs.introcs.StdOut;
 
 public class Spielleiter {
+	
+	static String gewinner = "";
+	static int punktzahl = 0;
 
 	public static void main(String[] args) {
 		
@@ -23,15 +26,13 @@ public class Spielleiter {
 		}
 		
 		for(int spieler = 0; spieler< sp.length; spieler++){
-			String gewinner = "";
-			int punktzahl = 0;
-			
-			if(punktzahl <= sp[spieler].getPunktzahl()){
-				punktzahl = sp[spieler].getPunktzahl();
+			int p = sp[spieler].getPunktzahl();
+			if(punktzahl <= p){
+				punktzahl = p;
 				gewinner = sp[spieler].getName();
 				
 			}
-			StdOut.println(gewinner + " hat mit einer Gesamtpunktzahl von " + punktzahl + " gewonnen!");
 		}
+		StdOut.println(gewinner + " hat mit einer Gesamtpunktzahl von " + punktzahl + " gewonnen!");
 	}
 }
